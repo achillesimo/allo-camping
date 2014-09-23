@@ -1,0 +1,37 @@
+campingApp.service('HomeServices', function ($http, $q){
+	
+	// liste des campings
+	this.getCampings = function(){
+		 var campingsRequest = $http({
+			method : 'GET',
+		    url    : '/allocamping-services/camping'    	    
+		});
+		/*
+		.success(function(data, status, headers, config) {
+			console.log(data);
+			$scope.dynMarkers = [];
+	        for (var i = 0; i < data.length; i++) {
+	        	console.log(data[i].latitude);
+	        	$scope.marker = {
+	        			id:i,
+	                    coords: {
+	                        latitude: data[i].latitude,
+	                        longitude: data[i].longitude
+	                    }
+	        	}
+	        	
+	          $scope.dynMarkers[i] = new google.maps.Marker({
+	            title: "Marker: " + i,
+	            setMap : $scope.map
+	          });
+	          
+	        }	    
+	    }).
+	    error(function(data, status, headers, config) {
+	      // called asynchronously if an error occurs
+	    });
+	    */
+	};
+	
+	
+});

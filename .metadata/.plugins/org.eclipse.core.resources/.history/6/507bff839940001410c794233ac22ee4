@@ -1,0 +1,3 @@
+campingApp.controller('UsersCtrl', function ($scope, $http){
+	
+});

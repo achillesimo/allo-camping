@@ -1,0 +1,185 @@
+campingApp.controller('UsersCtrl', function ($scope, $http){
+	$scope.addUser = function(){
+		identifiant = $scope.identifiant;
+		email       = $scope.email;
+		passwd		= $scope.passwd;
+		
+		console.log(identifiant+" "+email+" "+passwd);
+		var user = {"login" : identifiant, "email" : email, "passwd" : passwd};
+		$http({
+			method : 'POST',
+		    url    : 'http://localhost:8080/allocamping-services/utilisateurs',
+		    data  : JSON.stringify(user)
+		}).success(function(data, status, headers, config) {
+		      // this callback will be called asynchronously
+		      // when the response is available
+		    }).
+		    error(function(data, status, headers, config) {
+		      // called asynchronously if an error occurs
+		      // or server returns response with an error status.
+		    });
+		
+		
+	}
+});
+
+
+campingApp.controller('CampingCtrl', function ($scope, $http){
+	$scope.addcamping = function(){
+		nomCamping = $scope.nomCamping;
+		ville = $scope.ville;
+		adresse = $scope.adresse;
+		codePostal = $scope.codePostal;
+		latitude = $scope.latitude;
+		longitude = $scope.longitude;
+		
+		var camping = {"nomCamping" : nomCamping, "ville" : ville, "adresse" : adresse, "codePostal" : codePostal, "latitude" : latitude , "longitude":longitude};
+		$http({
+			method : 'POST',
+		    url    : 'http://localhost:8080/allocamping-services/camping',
+		    data  : JSON.stringify(camping)
+		}).success(function(data, status, headers, config) {
+		      // this callback will be called asynchronously
+		      // when the response is available
+		    }).
+		    error(function(data, status, headers, config) {
+		      // called asynchronously if an error occurs
+		      // or server returns response with an error status.
+		    });
+	}
+	
+	
+	
+});
+
+
+
+
+
+campingApp.controller('RechcampingCtrl', function ($scope, $http){
+	$scope.addcamping = function(){
+		nomCamping = $scope.nomCamping;
+		ville = $scope.ville;
+		
+		
+		var rechcamping = { "ville" : ville, };
+		$http({
+			method : 'GET',
+		    url    : 'http://localhost:8080/allocamping-services/rechcamping',
+		    data  : JSON.stringify(rechcamping)
+		}).success(function(data, status, headers, config) {
+		      // this callback will be called asynchronously
+		      // when the response is available
+		    }).
+		    error(function(data, status, headers, config) {
+		      // called asynchronously if an error occurs
+		      // or server returns response with an error status.
+		    });
+	}
+	
+	
+	
+});
+
+
+
+
+
+
+campingApp.controller('connectCtrl', function ($scope, $http){
+	$scope.addcamping = function(){
+		email = $scope.email;
+		mot = $scope.mot;
+		mot = $scope.mot;
+
+		
+		var connect = { "email" :email, "mot" :mot};
+		$http({
+			method : 'POST',
+		    url    : 'http://localhost:8080/allocamping-services/connect',
+		    data  : JSON.stringify(connect)
+		}).success(function(data, status, headers, config) {
+		      // this callback will be called asynchronously
+		      // when the response is available
+		    }).
+		    error(function(data, status, headers, config) {
+		      // called asynchronously if an error occurs
+		      // or server returns response with an error status.
+		    });
+	}
+	
+	
+	
+});
+
+
+
+campingApp.controller('HomeCtrl', function ($scope, $http, $interval,$location){	
+	//var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
+	var campings ="";	
+	$http({
+		method : 'GET',
+	    url    : 'http://localhost:8080/allocamping-services/camping'    	    
+	}).success(function(data, status, headers, config) {
+		$scope.dynMarkers = [];
+        for (var i = 0; i < 8; i++) {
+          $scope.dynMarkers[i] = new google.maps.Marker({
+            title: "Marker: " + i,
+            setMap : $scope.map
+          })
+        }
+
+        $scope.GenerateMapMarkers = function() {
+          var d = new Date(); //To show marker location changes over time
+          $scope.date = d.toLocaleString();
+
+          var numMarkers = Math.floor(Math.random() * 4) + 4; //between 4 to 8 markers
+          for (i = 0; i < numMarkers; i++) {
+            var lat = 43.6600000 + (Math.random() / 100);
+            var lng = -79.4103000 + (Math.random() / 100);
+
+            var loc = new google.maps.LatLng(data[0].latitude, data[0].longitude);
+            $scope.dynMarkers[i].setPosition(loc);
+            //$scope.dynMarkers[i].setMap(c);
+          }
+        };
+        
+        
+
+        $interval($scope.GenerateMapMarkers, 2000);
+	    
+    }).
+    error(function(data, status, headers, config) {
+      // called asynchronously if an error occurs
+    });
+	 
+	
+
+	$scope.rechercherCamping = function(){
+		console.log("Rechercher camping");
+		$location.path("/rechcamping");
+
+	};
+
+	$scope.proposerCamping = function(){
+		console.log("Proposer camping");
+		$location.path("/camping");
+
+	};
+	
+	
+	$scope.map = {
+	    center: {
+					latitude:  48.8534100,
+					longitude: 2.3488000
+		    	},
+	    zoom: 10
+	};
+});
+
+
+
+
+
+
+

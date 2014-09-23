@@ -1,0 +1,3 @@
+campingApp.directive('marker', function ($http, $q){
+	
+});

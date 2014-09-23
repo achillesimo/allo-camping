@@ -1,0 +1,47 @@
+package com.allocamping.services;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+
+import com.allocamping.communs.models.Camping;
+import com.allocamping.core.CampingCore;
+@Path("/camping")
+public class CampingServices {
+	
+	CampingCore campingCore = new CampingCore();
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addCamping(Camping camping) {
+		System.out.println("Adresse "+camping.getAdresse());
+		campingCore.addCamping(camping);
+}
+
+	
+	
+	
+	@GET
+	public List<Camping> getCampings() {		
+		List<Camping> campings = campingCore.getCamping();
+		return campings;
+	}
+	
+	@GET
+	public List<Camping> getrechCampings(String ville) {
+		List<Camping> campings = campingCore.rechercherCamping(ville);
+		return campings;
+	}
+	
+	
+	@GET
+	public Camping getCamping(String id) {
+		System.out.println(id);
+		return null;
+	}
+}
+
+

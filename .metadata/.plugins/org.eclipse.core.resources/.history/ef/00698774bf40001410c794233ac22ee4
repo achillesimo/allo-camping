@@ -1,0 +1,12 @@
+campingApp.directive('markers', function (){
+	var marker = {};
+	return {
+		scope : true,
+		restrict :  'E',
+		link : function(scope, elt, attribute){
+			 scope.markers.push({
+				 models : '='  
+			 });
+		}
+	};
+});

@@ -1,0 +1,9 @@
+campingApp.directive('marker', function (){
+	return {
+		scope : {},
+		restrict :  'E',
+		link : function(scope, elt, attribute){
+			
+		}
+	};
+});

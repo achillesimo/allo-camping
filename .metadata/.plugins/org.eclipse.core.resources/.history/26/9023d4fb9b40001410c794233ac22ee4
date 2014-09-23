@@ -1,0 +1,9 @@
+campingApp.service('HomeServices', function ($http){
+	
+	// liste des campings
+	this.getCampings = function(){
+		
+	};
+	
+	
+});

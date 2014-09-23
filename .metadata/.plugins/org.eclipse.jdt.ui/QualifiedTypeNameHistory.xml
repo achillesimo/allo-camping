@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.allocamping.commun.Utilisateur"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Encoded"/>
+<fullyQualifiedTypeName name="com.allocamping.communs.Utilisateur"/>
+<fullyQualifiedTypeName name="org.mongodb.morphia.annotations.Entity"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="com.google.code.geocoder.Geocoder"/>
+<fullyQualifiedTypeName name="com.google.code.geocoder.GeocoderRequestBuilder"/>
+<fullyQualifiedTypeName name="com.google.code.geocoder.model.GeocoderRequest"/>
+<fullyQualifiedTypeName name="com.google.code.geocoder.model.GeocodeResponse"/>
+<fullyQualifiedTypeName name="com.google.code.geocoder.model.LatLng"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="org.bson.types.ObjectId"/>
+</qualifiedTypeNameHistroy>

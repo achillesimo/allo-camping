@@ -1,0 +1,9 @@
+campingApp.directive('markers', function (){
+	var marker = {};
+	return {
+		restrict :  'E',
+		scope : {
+			markersModels : '='
+		}
+	};
+});

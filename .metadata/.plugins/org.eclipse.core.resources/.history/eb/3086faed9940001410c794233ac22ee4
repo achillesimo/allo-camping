@@ -1,0 +1,3 @@
+campingApp.services('HomeServices', function ($scope, $http){
+	
+});

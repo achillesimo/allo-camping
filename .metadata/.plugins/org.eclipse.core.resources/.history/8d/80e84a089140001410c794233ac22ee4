@@ -1,0 +1,5 @@
+<div id ="map_canvas" class="map section w100 mod center">
+	<google-map draggable="true" center="map.center" >
+		
+	</google-map>
+</div>

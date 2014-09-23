@@ -1,0 +1,20 @@
+<div class="registersection w100 mod">
+	<p class="w100 mod">&nbsp;</p>
+	<p class="w100 mod">&nbsp;</p>
+	<div class="w40 center mod">
+		<div class="mod w100">
+			<div class="left">
+			<i class="fa fa-bank fa-10x"></i> 
+			</div>
+			<div class="right">
+				<h1 class="titre">{{nom}}</h1>	
+				<div class="adresse">
+					<h3>{{adresse}} <br />
+					{{codePostal}} - {{ville}} </h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="w100 mod">&nbsp;</p>
+	<p class="w100 mod">&nbsp;</p>
+</div>

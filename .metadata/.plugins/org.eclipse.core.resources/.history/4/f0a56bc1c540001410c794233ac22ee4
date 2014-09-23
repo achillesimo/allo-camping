@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="campingApp">
+	<head >
+		<title>ALLO CAMPING</title>
+		<link rel="stylesheet/less" type="text/css" href="stylesheet/extern/knackLESS/knacss.less" />
+		<link rel="stylesheet/less" type="text/css" href="stylesheet/local/allocamping.less" />
+		<link rel="stylesheet" type="text/css" href="stylesheet/local/fonts/stylesheet.css" />
+		<script src="js/extern/less.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="js/local/camping-map.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/extern/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="js/extern/angular-1.2.16/angular.js" type="text/javascript"></script>
+		<script src="js/extern/angular-1.2.16/angular-route.js" type="text/javascript"></script>
+		<script src="js/extern/underscore.js" type="text/javascript"></script>
+		<script src="js/extern/angular-google-maps.js" type="text/javascript"></script>
+		<script src="js/local/camping-app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/local/camping-app-directives.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/local/camping-app-services.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/local/camping-app-controllers.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<section class="w100 mod campingbody">
+		<header class="w100 mod">
+			<div class="container w80 center">
+				<div class="mod w100">
+					<div class="logo left">
+						<p><a href="" title="ALLO CAMPING">ALLO CAMPING</a></p>
+					</div>
+					<div class="login right">
+					 	<a href="#/connexion" class="conexion">CONNEXION</a>
+						<p class="mod center">
+					
+				</p>
+					</div>
+					<div class="proprech right">
+						<a href="#/rechercher-camping" >Rechercher</a>
+						OU
+						<a href="#/proposer-camping">Proposer</a>
+						
+                        
+					</div>
+					
+				</div>
+			</div>
+		</header>	
+		<div class="w100 mod" ng-view></div>
+		<footer class="w100 mod">
+			<div class="container">
+				
+			</div>
+		</footer>
+	</section>	
+	</body>
+</html>

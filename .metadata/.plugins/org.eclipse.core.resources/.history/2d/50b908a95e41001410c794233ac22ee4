@@ -1,0 +1,90 @@
+package com.allocamping.communs.models;
+
+
+
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
+@Entity("camping")
+public class Camping {
+	@Id
+	ObjectId id;
+	String nomCamping;
+	String ville ;
+	String adresse;
+	int codePostal;
+	float latitude;
+	float longitude;
+	public Camping(){}
+	
+	public Camping(ObjectId id, String nomCamping, String ville,
+			String adresse, String codePostal, float latitude, float longitude) {
+		super();
+		this.id = id;
+		this.nomCamping = nomCamping;
+		this.ville = ville;
+		this.adresse = adresse;
+		this.codePostal = codePostal;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+
+	public ObjectId getId() {
+		return id;
+	}
+
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
+
+	public String getNomCamping() {
+		return nomCamping;
+	}
+
+	public void setNomCamping(String nomCamping) {
+		this.nomCamping = nomCamping;
+	}
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public String getCodePostal() {
+		return codePostal;
+	}
+
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
+
+	public float getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
+	}
+
+	public float getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
+	}
+	
+}		
+

@@ -1,0 +1,6 @@
+<div id ="map_canvas" class="map section w100 mod center">
+	<google-map draggable="true" center="map.center" zoom="map.zoom">
+		<marker ng-repeat="m in map.markers" coords="m.coords">
+		</marker>
+	</google-map>
+</div>

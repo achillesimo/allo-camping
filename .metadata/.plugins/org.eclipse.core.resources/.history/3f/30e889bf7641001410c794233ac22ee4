@@ -1,0 +1,24 @@
+package com.allocamping.communs.models;
+
+
+
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
+@Entity("camping")
+public class Camping {
+	@Id
+	ObjectId id;
+	String nomCamping;
+	String ville ;
+	String adresse;
+	int codePostal;
+	float latitude;
+	float longitude;
+	String idStringValue;
+	public Camping(){}
+	
+	
+}		
+

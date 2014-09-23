@@ -1,0 +1,16 @@
+<div class="registersection w100 mod">
+	<p class="w100 mod">&nbsp;</p>
+	<p class="w100 mod">&nbsp;</p>
+	<div class="w40 center mod">
+		<div class="mod w100">
+			<div class="left">
+			<i class="fa fa-bank fa-5x"></i> 
+			</div>
+			<div class="right">
+				<h1>{{nom}}</h1>	
+			</div>
+		</div>
+	</div>
+	<p class="w100 mod">&nbsp;</p>
+	<p class="w100 mod">&nbsp;</p>
+</div>

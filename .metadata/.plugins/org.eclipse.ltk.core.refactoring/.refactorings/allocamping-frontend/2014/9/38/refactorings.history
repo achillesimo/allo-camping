@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;camping-app-services.js&apos; to &apos;local&apos;&#x0D;&#x0A;- Original project: &apos;allocamping-frontend&apos;&#x0D;&#x0A;- Destination element: &apos;local&apos;&#x0D;&#x0A;- Original element: &apos;camping-app-services.js&apos;" description="Copy file" element1="WebContent/js/local/camping-app-services.js" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1411209546632" target="/allocamping-frontend/WebContent/js/local" units="0" version="1.0"/>
+</session>

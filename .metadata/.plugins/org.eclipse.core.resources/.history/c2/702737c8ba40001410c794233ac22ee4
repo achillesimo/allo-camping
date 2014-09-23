@@ -1,0 +1,10 @@
+campingApp.directive('markerss', function (){
+	return {
+		scope : true,
+		restrict :  'E',
+		link : function(scope, elt, attribute){
+			
+		},
+		template : "Bonjour"
+	};
+});

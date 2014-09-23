@@ -1,0 +1,10 @@
+server mongo
+
+mongod --dbpath C:\Users\kembou\Documents\allo-camping\data\db
+
+
+use allocamping
+
+show collection
+
+db.camping.find ().pretty()

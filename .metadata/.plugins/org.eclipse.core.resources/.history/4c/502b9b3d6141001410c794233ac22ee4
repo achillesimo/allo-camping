@@ -1,0 +1,7 @@
+<div id ="map_canvas" class="map section w100 mod center">
+	<google-map draggable="true" center="map.center" zoom="map.zoom">
+		 <!-- <marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id" > -->
+		 <markers models="markersModels" coords="'self'" options="'options'">
+      </markers>
+	</google-map>
+</div>

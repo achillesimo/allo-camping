@@ -1,0 +1,10 @@
+campingApp.directive('NamerDirective', function (){
+	return {
+		scope : {},
+		restrict :  'E',
+		link : function(scope, elt, attribute){
+			
+		},
+		template : ""
+	};
+});
